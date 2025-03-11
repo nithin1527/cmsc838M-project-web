@@ -30,8 +30,8 @@ export default function Home() {
         ></div>
 
         {/* Floating Text Box */}
-        <div className="relative z-10 text-center px-6 md:px-12 bottom-12">
-          <div className="bg-white rounded-xl shadow-md px-8 py-8 max-w-3xl mx-auto border border-gray-700">
+        <div className="relative z-10 text-center px-6 md:px-14 bottom-12">
+          <div className="bg-white rounded-xl shadow-md px-8 py-8 max-w-5xl mx-auto border border-gray-700">
             <motion.h1
               className="text-5xl md:text-6xl font-medium text-gray-900 leading-tight tracking-tight"
               style={{ fontFamily: 'serif' }}
@@ -49,15 +49,14 @@ export default function Home() {
             >
               A Physics-Informed, Data-Driven approach to Vehicle, Pedestrian, and Micro-Mobility Interactions
             </motion.p>
-            {/* <motion.p
-              className="text-lg md:text-xl mt-4 text-black-900 font-medium"
-              style={{ fontFamily: 'serif, Inter'}}
+            <motion.p
+              className="text-lg md:text-xl mt-4 text-gray-900 font-bold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, ease: "easeOut" }}
             >
-              Members: Grace Cai,  Nithin Parepally
-            </motion.p> */}
+              Group: Grace Cai,   Nithin Parepally
+            </motion.p>
             {/* <div className="mt-8 flex justify-center gap-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
