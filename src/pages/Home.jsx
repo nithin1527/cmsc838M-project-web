@@ -50,12 +50,12 @@ export default function Home() {
               A Physics-Informed, Data-Driven approach to Vehicle, Pedestrian, and Micro-Mobility Interactions
             </motion.p>
             <motion.p
-              className="text-lg md:text-xl mt-4 text-gray-900 font-bold"
+              className="text-lg md:text-xl mt-4 text-gray-900 font-semibold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, ease: "easeOut" }}
             >
-              Group: Grace Cai,   Nithin Parepally
+              Grace Cai,   Nithin Parepally
             </motion.p>
             {/* <div className="mt-8 flex justify-center gap-4">
               <motion.button
