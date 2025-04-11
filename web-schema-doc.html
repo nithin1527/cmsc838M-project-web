@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root {
+    --background-color: #ffffff;
+    --card-background-color: #ffffff;
+    --text-primary-color: #111827;
+    --text-secondary-color: #4b5563;
+    --header-background-color: #f3f4f6;
+    --header-text-color: #111827;
+    --hover-background-color: #f3f4f6;
+    --border-color-soft: #e5e7eb;
+    --border-color-medium: #d1d5db;
+    --code-background-color: #eef2ff;
+    --code-text-color: #3730a3;
+    --code-border-color: #c7d2fe;
+    --link-color: #1e40af;
+    --link-hover-color: #1d4ed8;
+
+    --border-radius-lg: 10px;
+    --border-radius-md: 8px;
+    --border-radius-sm: 6px;
+
+    --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+    --transition-speed: 0.15s;
+    --transition-timing: ease-in-out;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 40px;
+    color: var(--text-primary-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-primary-color);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+    color: var(--text-primary-color);
+}
+
+table.main-schema-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 40px;
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color-medium);
+}
+
+.main-schema-table th {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 16px 24px;
+    text-align: left;
+    vertical-align: top;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color-medium);
+}
+
+.main-schema-table td {
+    padding: 16px 24px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.95em;
+    color: var(--text-secondary-color);
+    border-bottom: 1px solid var(--border-color-soft);
+    transition: background-color var(--transition-speed) var(--transition-timing);
+}
+
+.main-schema-table td:first-child {
+    color: var(--text-primary-color);
+    font-weight: 500;
+}
+
+.main-schema-table tr:last-child td {
+    border-bottom: none;
+}
+
+td table.nested-details {
+    background: var(--card-background-color);
+    margin: 12px 0;
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color-soft);
+    box-shadow: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+td table.nested-details th {
+    background-color: #f9fafb;
+    color: var(--text-secondary-color);
+    font-size: 0.85em;
+    padding: 10px 16px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    border-bottom: 1px solid var(--border-color-soft);
+}
+
+td table.nested-details td {
+    font-size: 0.9em;
+    padding: 10px 16px;
+    color: var(--text-secondary-color);
+    background-color: var(--card-background-color);
+    border-bottom: 1px solid var(--border-color-soft);
+    transition: background-color var(--transition-speed) var(--transition-timing);
+}
+
+td table.nested-details tr:last-child td {
+    border-bottom: none;
+}
+
+.code {
+    background: var(--code-background-color);
+    color: var(--code-text-color);
+    padding: 3px 8px;
+    border-radius: var(--border-radius-sm);
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid var(--code-border-color);
+    display: inline-block;
+}
+
+td ul {
+    margin: 8px 0 8px 20px;
+    padding: 0;
+    list-style-type: disc;
+    color: var(--text-secondary-color);
+}
+
+td li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed) var(--transition-timing),
+                text-decoration var(--transition-speed) var(--transition-timing);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .main-schema-table th,
+    .main-schema-table td {
+        padding: 12px 16px;
+        font-size: 0.9em;
+    }
+    .main-schema-table th {
+        font-size: 0.85em;
+    }
+    td table.nested-details th,
+    td table.nested-details td {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    .code {
+        font-size: 0.85em;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Phases Schema</h2>
+<table class="main-schema-table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Type / Structure</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">id</span></td>
+            <td>Number</td>
+            <td>Unique identifier for phase</td>
+            <td><code>123</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">image</span></td>
+            <td>String (image path)</td>
+            <td>Main image displayed on detailed phase page</td>
+            <td><code>/images/phase1.jpg</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">title</span></td>
+            <td>String</td>
+            <td>Title of the phase (e.g., "Phase 1: Project Proposal")</td>
+            <td><code>Phase 1: Project Proposal</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">overview</span></td>
+            <td>String</td>
+            <td>Brief summary or description of phase goals</td>
+            <td><code>Short description of project proposal phase.</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">mainContent</span></td>
+            <td>String</td>
+            <td>Detailed content / markdown details for the phase</td>
+            <td><code># Phase 1: Project Proposal</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">techStack</span></td>
+            <td>Array of Strings</td>
+            <td>Technologies, tools used</td>
+            <td><code>["React", "Node.js", "PostgreSQL"]</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">concepts</span></td>
+            <td>Array of Strings</td>
+            <td>Key concepts relevant to the phase</td>
+            <td><code>["Project Management", "Requirement Gathering"]</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">resources</span></td>
+            <td>
+                Object
+                <table class="nested-details">
+                    <thead>
+                        <tr><th>Nested Property</th><th>Type</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">papers</span></td>
+                            <td>Array of Objects</td>
+                            <td>Each object:
+                                <ul>
+                                    <li><span class="code">title</span> (String)</li>
+                                    <li><span class="code">link</span> (String)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">videos</span></td>
+                            <td>Array of Objects</td>
+                            <td>Each object:
+                                <ul>
+                                    <li><span class="code">name</span> (String)</li>
+                                    <li><span class="code">link</span> (String)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">notion</span></td>
+                            <td>Array of Objects (optional/commented out)</td>
+                            <td>Each object:
+                                <ul>
+                                    <li><span class="code">name</span> (String)</li>
+                                    <li><span class="code">link</span> (String)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">links</span></td>
+                            <td>Array of Objects</td>
+                            <td>Each object:
+                                <ul>
+                                    <li><span class="code">name</span> (String)</li>
+                                    <li><span class="code">link</span> (String)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>Lists of supporting materials and links</td>
+            <td><code>{papers: [...], videos: [...]}</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">color</span></td>
+            <td>String (Color code)</td>
+            <td>Styling accent color</td>
+            <td><code>#f0f0f0</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">deliverables</span></td>
+            <td>
+                Array of Objects
+                <table class="nested-details">
+                   <thead>
+                        <tr><th>Property</th><th>Type</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">title</span></td>
+                            <td>String</td>
+                            <td>Deliverable title</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">description</span></td>
+                            <td>String</td>
+                            <td>Deliverable description</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">actions</span></td>
+                            <td>Array of Objects
+                                <table class="nested-details">
+                                   <thead>
+                                        <tr><th>Property</th><th>Type</th><th>Notes</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="code">type</span></td>
+                                            <td>String</td>
+                                            <td>e.g., google-slides, github, pdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="code">name</span></td>
+                                            <td>String</td>
+                                            <td>Button text</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="code">link</span></td>
+                                            <td>String</td>
+                                            <td>URL</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>Links to related resources/deliverables</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>Outputs of the phase</td>
+            <td><code>[{title: "Deliverable 1", description: "...", actions: [...]}]</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Updates Schema</h2>
+<table class="main-schema-table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Type / Structure</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">date</span></td>
+            <td>Date</td>
+            <td>Date of the update</td>
+            <td><code>2023-10-01</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">title</span></td>
+            <td>String</td>
+            <td>Title of the update</td>
+            <td><code>Update 1: Initial Release</code></td>
+        </tr>
+        <tr>
+            <td><span class="code">content</span></td>
+            <td>Array of Strings</td>
+            <td>Each string represents a bullet point in the update</td>
+            <td><code>["Initial release features", "Bug fixes", "Performance improvements"]</code></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
