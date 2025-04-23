@@ -44,52 +44,52 @@ export default function PhasePage() {
 
       {/* Hero Section */}
       <section
-        style={{  }}
-        className="relative w-full h-[400px] md:h-[500px] overflow-hidden shadow-lg"
+        className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center mb-10 mt-5"
       >
-        {/* Background Image */}
-        <img
-          src={phase.image ? phase.image : `https://picsum.photos/1200/500?random=${phase.id}`} 
-          alt={`Phase ${phase.id}`}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {/* Background Image with Rounded Corners */}
+        <div
+          className="w-full h-full bg-cover bg-center flex items-center justify-center m-10 rounded-2xl overflow-hidden relative"
+          style={{
+            backgroundImage: `url(${phase.image ? phase.image : `https://picsum.photos/1200/500?random=${phase.id}`})`,
+          }}
+        >
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-black/20"></div>
+          {/* Phase Badge */}
+          <div className="absolute top-6 left-6 z-20">
+            <span
+              className="text-md md:text-lg font-semibold px-4 py-2 rounded-md"
+              style={{
+                backgroundColor: phase.color,
+                color: '#FFFFFF',
+              }}
+            >
+              Phase {phase.id}
+            </span>
+          </div>
 
-        {/* Phase Badge */}
-        <div className="absolute top-6 left-6 z-20">
-          <span
-            className="text-md md:text-lg font-semibold px-4 py-2 rounded-md"
-            style={{
-              backgroundColor: phase.color,
-              color: '#FFFFFF',
-            }}
-          >
-            Phase {phase.id}
-          </span>
-        </div>
+          {/* Title and Subtitle Box */}
+          <div className="relative z-20 flex flex-col items-center justify-center h-full px-6">
+            <div className="bg-white rounded-xl shadow-xl px-10 md:px-16 py-8 md:py-12 max-w-4xl text-center border border-gray-100">
 
-        {/* Title and Subtitle Box */}
-        <div className="relative z-20 flex flex-col items-center justify-center h-full px-6">
-          <div className="bg-white rounded-xl shadow-xl px-10 md:px-16 py-8 md:py-12 max-w-4xl text-center border border-gray-100">
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl font-medium font-serif text-gray-900 mb-4 leading-snug">
+                {titleWithoutPhase}
+              </h1>
 
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-medium font-serif text-gray-900 mb-4 leading-snug">
-              {titleWithoutPhase}
-            </h1>
+              {/* Subtitle */}
+              <p className="text-gray-600 text-md md:text-md leading-relaxed max-w-3xl mx-auto">
+                {phase.overview}
+              </p>
 
-            {/* Subtitle */}
-            <p className="text-gray-600 text-md md:text-md leading-relaxed max-w-3xl mx-auto">
-              {phase.overview}
-            </p>
-
-            {/* Decorative Accent Line (Bottom) */}
-            <div className="flex justify-center mt-6">
-              <div
-                className="h-1 w-16 rounded-full"
-                style={{ backgroundColor: phase.color }}
-              ></div>
+              {/* Decorative Accent Line (Bottom) */}
+              <div className="flex justify-center mt-6">
+                <div
+                  className="h-1 w-16 rounded-full"
+                  style={{ backgroundColor: phase.color }}
+                ></div>
+              </div>
             </div>
           </div>
         </div>
