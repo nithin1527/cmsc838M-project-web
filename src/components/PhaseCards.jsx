@@ -29,7 +29,7 @@ const PhaseCards = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-          className="text-md text-gray-600 mt-2"
+          className="text-gray-600 mt-2 font-light font-display"
         >
           Explore the different stages of project development.
         </motion.p>

@@ -32,7 +32,7 @@ export default function PhaseCard({ title, subtitle, description, tags, color, i
       <h3 className="text-3xl font-medium font-serif text-gray-700 mb-1 tracking-tight">{title}</h3>
 
       {/* Description */}
-      <p className="text-sm text-gray-500 font-medium mb-4 leading-relaxed mt-2">
+      <p className="text-sm text-gray-500 font-medium mb-4 leading-relaxed mt-2 font-light font-display">
         {description}
       </p>
 

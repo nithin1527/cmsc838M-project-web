@@ -108,13 +108,17 @@ export default function PhasePage() {
               )}
           </SectionCard>
 
-          <SectionCard title="Research Process" phaseColor={phase.color}>
-              {phase.mainContent && (
-                <div className="space-y-4">
-                  <p className="text-gray-700 text-base leading-relaxed">{phase.mainContent}</p>
-                </div>
-              )}
-          </SectionCard>
+          {phase.mainContent && (
+            <SectionCard title={phase.mainContentTitle} phaseColor={phase.color}>
+              <div className="space-y-4">
+                {phase.mainContent.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 text-base leading-relaxed">
+                    {paragraph.trim()}
+                  </p>
+                ))}
+              </div>
+            </SectionCard>
+          )}
 
           {/* Deliverables Section */}
           {phase.deliverables?.length > 0 && (
