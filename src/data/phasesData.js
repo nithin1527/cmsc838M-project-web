@@ -72,7 +72,7 @@ export const phasesData = [
       "In this phase, we design and implement the user interface for our simulator. We develop Layout Studio, a 2D layout editor for creating custom layouts and rendering them in 3D.",
     mainContentTitle: "Code Development Progress",
     mainContent: `
-      We share progress on code development. Thus far, we have designed and implemented an intuitive user interface for adjusting values for density and risk tolerance hyper-parameters and creating new layouts. Additionally, we began 3D environment rendering having solidified our 2D to 3D mapping strategy.
+      We have designed and implemented an intuitive user interface for adjusting values for density and risk tolerance hyper-parameters and creating new layouts. Additionally, we began 3D environment rendering having solidified our 2D to 3D mapping strategy.
 
       Since our simulator employs interactive-based methods, we provide sliders for adjusting density and risk tolerance values. This adjustment will be reflected in real time when the simulation is live. Note: for a better user experience, we also added info icons that display tooltips when the cursor hovers over them.
 
