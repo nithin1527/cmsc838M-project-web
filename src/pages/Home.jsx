@@ -26,10 +26,29 @@ export default function Home() {
             backgroundImage: `url(${crowdBackground})`,
           }}
         >
-            <div className="z-10 text-center px-6 md:px-14">
-            <div className="bg-white rounded-xl shadow-md px-8 py-8 max-w-5xl mx-auto border border-gray-700">
+            <div className="z-10 text-center px-2 md:px-14">
+            <div class="flex flex-row gap-2 items-center justify-center mb-4">
+            <motion.p
+                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
+                  initial={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                Grace Cai
+              </motion.p>
+
+            <motion.p
+                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
+                  initial={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                Nithin Parepally
+              </motion.p>
+            </div>
+            <div className="bg-white rounded-xl shadow-md p-8 max-w-5xl mx-auto flex flex-col items-center justify-end">
               <motion.h1
-                className="text-5xl md:text-6xl font-bold text-gray-700 leading-tight tracking-tight font-display"
+                className="text-5xl md:text-6xl font-bold text-gray-700 leading-tight tracking-tight font-display mb-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -37,22 +56,16 @@ export default function Home() {
                 S C O O T O P I A
               </motion.h1>
               <motion.p
-                className="text-lg md:text-xl mt-8 text-gray-700 font-medium font-serif"
+                className="text-lg md:text-xl text-gray-700 font-light font-display mt-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease: "easeOut" }}
               >
-                An RL Approach to Modeling Unsafe Vehicle, Pedestrian, and Micro-Mobility Interactions
-              </motion.p>
-              <motion.p
-                className="text-lg md:text-xl mt-4 text-gray-900 font-medium"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
-              >
-                Grace Cai,   Nithin Parepally
+                Using RL to Model Unsafe Vehicle, Pedestrian, and Micro-Mobility Interactions
               </motion.p>
             </div>
+            
+            
           </div>
         </div>
 
