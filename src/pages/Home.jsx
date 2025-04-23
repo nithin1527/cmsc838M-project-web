@@ -27,25 +27,7 @@ export default function Home() {
           }}
         >
             <div className="z-10 text-center px-2 md:px-14">
-            <div class="flex flex-row gap-2 items-center justify-center mb-4">
-            <motion.p
-                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
-                  initial={{ opacity: 1, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.0, ease: "easeOut" }}
-              >
-                Grace Cai
-              </motion.p>
-
-            <motion.p
-                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
-                  initial={{ opacity: 1, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.0, ease: "easeOut" }}
-              >
-                Nithin Parepally
-              </motion.p>
-            </div>
+            
             <div className="bg-white rounded-xl shadow-md p-8 max-w-5xl mx-auto flex flex-col items-center justify-end">
               <motion.h1
                 className="text-5xl md:text-6xl font-bold text-gray-700 leading-tight tracking-tight font-display mb-2"
@@ -65,6 +47,25 @@ export default function Home() {
               </motion.p>
             </div>
             
+            <div class="flex flex-row gap-2 items-center justify-center mt-4">
+            <motion.p
+                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                Grace Cai
+              </motion.p>
+
+            <motion.p
+                  className="text-lg md:text-xl text-gray-700 font-normal font-display rounded-full bg-white p-2 px-4 inline-block"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                Nithin Parepally
+              </motion.p>
+            </div>
             
           </div>
         </div>
