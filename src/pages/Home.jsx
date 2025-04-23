@@ -9,8 +9,7 @@ import PhaseCards from "../components/PhaseCards";
 import { MdCampaign } from "react-icons/md";
 import { FaBullhorn } from "react-icons/fa";
 
-
-import crowdBackground from "../assets/crowd-background.png";
+import crowdBackground from "../assets/crowd-background.jpg";
 import AboutSection from "../components/About";
 
 export default function Home() {
@@ -57,22 +56,6 @@ export default function Home() {
             >
               Grace Cai,   Nithin Parepally
             </motion.p>
-            {/* <div className="mt-8 flex justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gray-900 text-white font-medium px-6 py-2 rounded-full shadow-md hover:bg-gray-700 transition"
-              >
-                Learn More
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-transparent border border-gray-900 text-gray-900 font-medium px-6 py-2 rounded-full transition"
-              >
-                Explore Research
-              </motion.button>
-            </div> */}
           </div>
         </div>
       </section>
