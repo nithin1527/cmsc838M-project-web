@@ -44,7 +44,7 @@ export default function PhasePage() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center mb-10 mt-5"
+        className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center mb-5 mt-5"
       >
         {/* Background Image with Rounded Corners */}
         <div
@@ -74,12 +74,12 @@ export default function PhasePage() {
             <div className="bg-white rounded-xl shadow-xl px-10 md:px-16 py-8 md:py-12 max-w-4xl text-center border border-gray-100">
 
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl font-medium font-serif text-gray-900 mb-4 leading-snug">
+              <h1 className="text-4xl md:text-5xl font-normal font-serif text-gray-900 mb-4 leading-snug">
                 {titleWithoutPhase}
               </h1>
 
               {/* Subtitle */}
-              <p className="text-gray-600 text-md md:text-md leading-relaxed max-w-3xl mx-auto">
+              <p className="text-gray-600 font-light font-display leading-relaxed max-w-3xl mx-auto">
                 {phase.overview}
               </p>
 
