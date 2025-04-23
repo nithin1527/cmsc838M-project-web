@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      // customize your theme if desired
+      fontFamily: {
+        display: ['Oswald', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      }
     },
   },
   plugins: [],

@@ -18,46 +18,45 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden flex items-center justify-center mb-2">
+      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center mb-10 mt-5">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="w-full h-full bg-cover bg-center flex items-center justify-center m-10 rounded-2xl"
           style={{
             backgroundImage: `url(${crowdBackground})`,
-            height: "95%",
           }}
-        ></div>
-
-        {/* Floating Text Box */}
-        <div className="relative z-10 text-center px-6 md:px-14 bottom-12">
-          <div className="bg-white rounded-xl shadow-md px-8 py-8 max-w-5xl mx-auto border border-gray-700">
-            <motion.h1
-              className="text-5xl md:text-6xl font-medium text-gray-900 leading-tight tracking-tight"
-              style={{ fontFamily: 'serif' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Modeling Unsafe Mobility Behaviors
-            </motion.h1>
-            <motion.p
-              className="text-lg md:text-xl mt-4 text-gray-700 font-medium font-serif"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
-            >
-              A Physics-Informed, Data-Driven approach to Vehicle, Pedestrian, and Micro-Mobility Interactions
-            </motion.p>
-            <motion.p
-              className="text-lg md:text-xl mt-4 text-gray-900 font-semibold"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
-            >
-              Grace Cai,   Nithin Parepally
-            </motion.p>
+        >
+            <div className="z-10 text-center px-6 md:px-14">
+            <div className="bg-white rounded-xl shadow-md px-8 py-8 max-w-5xl mx-auto border border-gray-700">
+              <motion.h1
+                className="text-5xl md:text-6xl font-bold text-gray-700 leading-tight tracking-tight font-display"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                S C O O T O P I A
+              </motion.h1>
+              <motion.p
+                className="text-lg md:text-xl mt-8 text-gray-700 font-medium font-serif"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                An RL Approach to Modeling Unsafe Vehicle, Pedestrian, and Micro-Mobility Interactions
+              </motion.p>
+              <motion.p
+                className="text-lg md:text-xl mt-4 text-gray-900 font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut" }}
+              >
+                Grace Cai,   Nithin Parepally
+              </motion.p>
+            </div>
           </div>
         </div>
+
+
       </section>
 
       <PhaseCards />
