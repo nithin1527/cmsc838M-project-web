@@ -54,7 +54,7 @@ export default function PhasePage() {
           }}
         >
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-gray-800/10"></div>
 
           {/* Phase Badge */}
           <div className="absolute top-6 left-6 z-20">
