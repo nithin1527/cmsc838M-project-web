@@ -9,8 +9,11 @@ export default function Layout({ children }) {
 
       {/* The main content goes below the nav; add padding-top to avoid overlap */}
       <main>
+        <div className="mt-5">
+        
         <FloatingNav />
         {children}
+        </div>
       </main>
     </div>
   );

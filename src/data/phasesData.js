@@ -90,6 +90,9 @@ export const phasesData = [
     ],
     // papers, notion, videos, links
     resources: {
+      videos: [
+        { name: "Layout Studio Demo", link: "https://youtu.be/22qrLhMcuCg" },
+      ],
       links: [
         { name: "Three.js Docs", link: "https://threejs.org/manual/#en/creating-a-scene" },
         { name: "TypeScript Docs", link: "https://www.typescriptlang.org/docs/" },
