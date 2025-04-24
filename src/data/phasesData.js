@@ -10,7 +10,7 @@ export const phasesData = [
     overview:
       "In this phase, we conduct our preliminary research into modeling pedestrian, vehicle, and micro-mobility interaction. \
       We provide slides for our project proposal presentation delivered on 3/11/2025. ",
-    mainContentTitle: "Research",
+    mainContentTitle: "Literature Review",
     mainContent: `
       Traditional state-of-the-art simulators (SUMO, VISSIM, and CARLA)  model vehicle and pedestrian behavior using rule-based systems or stochastic distributions, often failing to capture irregular, unsafe, or emergent behaviors typical in real-world scenarios—particularly in urban or campus-like environments. This motivates the integration of RL to simulate more human-like decision-making. Recently, efforts have been made to integrate RL into existing traffic simulators and develop new ones. Wu, et al. developed Flow, an open-source framework that addresses the complexity of mixed autonomy traffic systems, where a fraction of vehicles are autonomous for AV testing. It builds upon SUMO by integrating deep learning libraries Ray RLlib for RL methods and OpenAI gym for the MDP interface. Suo, et al. created TrafficSim which enhances the realism of simulated behaviors by learning directly from real-world human demonstrations, enabling it to capture more naturalistic driving styles. 
       \n\n
@@ -150,8 +150,7 @@ export const phasesData = [
           {
             type: "pdf",
             name: "Kinematic Equations for Pedestrian, MMV, and Vehicle Movement",
-            link: "https://youtu.be/22qrLhMcuCg"
-            // replace with google drive link ^
+            link: "https://drive.google.com/file/d/1HVDnPgxNvHYsjgvBgy50h5FDpJ3zq3AS/view?usp=sharing"
           },
         ],
       },
